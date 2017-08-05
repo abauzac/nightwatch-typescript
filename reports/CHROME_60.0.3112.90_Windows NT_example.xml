@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="example"
+    errors="0" failures="1" hostname="" id="" package="example" skipped="0"
+    tests="1" time="4.525" timestamp="Sat, 05 Aug 2017 21:08:33 GMT">
+  
+    <testcase name="Demo test Google" classname="example" time="4.525" assertions="4">
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;button[name=btnG]&gt; to be visible for 1000 milliseconds.">    at Object.Demo test Google (D:\work\nightwatch\tests\e2e\example.js:10:14)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

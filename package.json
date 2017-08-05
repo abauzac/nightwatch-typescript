@@ -1,0 +1,24 @@
+{
+  "name": "nightwatch-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "typescript": "^2.4.2",
+    "chromedriver": "^2.31.0",
+    "nightwatch": "^0.9.16"
+  },
+  "devDependencies": {
+    "@types/node" : "^8.0.19"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "selenium": "node_modules/.bin/chromedriver --port=9515",
+    "test": "node_modules/.bin/nightwatch"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "nightwatch": "registry:npm/nightwatch#1.0.0+20170319203500"
+  }
+}
