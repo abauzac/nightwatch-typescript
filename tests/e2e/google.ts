@@ -1,5 +1,4 @@
 import NB = require("nightwatch");
-import * as chromedriver from "chromedriver";
 
 export = {
 
@@ -10,11 +9,10 @@ export = {
             .assert.title('Google')
             .assert.visible('input[type=text]')
             .setValue('input[type=text]', 'rembrandt van rijn')
-            .waitForElementVisible('button[name=btnG]', 1000)
-            .click('button[name=btnG]')
+            .setValue('input[type=text]', client.Keys.ENTER) // press Enter to search
             .pause(1000)
-            .assert.containsText('ol#rso li:first-child',
-            'Rembrandt - Wikipedia')
+            .assert.containsText('#rso a:first-child',
+            'Rembrandt — Wikipédia')
             .end();
     }
 };
