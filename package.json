@@ -11,7 +11,7 @@
     "nightwatch": "^0.9.16"
   },
   "devDependencies": {
-    "@types/node" : "^8.0.19"
+    "@types/node": "^8.0.19"
   },
   "scripts": {
     "watch": "tsc -w",

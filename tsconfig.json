@@ -11,6 +11,7 @@
     },
     "include": [
         "tests/**/*.ts",
+        "commands",
         "./globalsModule.ts"
     ],
     "exclude": [

@@ -15,7 +15,17 @@ module.exports = {
             this.assert.equal(typeof title, 'string', "Title page is a string");
             this.assert.ok(title.indexOf("Dashboard") !== -1, "Title page should contains 'Dashboard'");
         })
-            .pause(3000)
+            .pause(1000)
+            .end();
+    },
+    'Demo admin Wordpress with command': function (client) {
+        client
+            .wplogin()
+            .getTitle(function (title) {
+            this.assert.equal(typeof title, 'string', "Title page is a string");
+            this.assert.ok(title.indexOf("Dashboard") !== -1, "Title page should contains 'Dashboard'");
+        })
+            .pause(1000)
             .end();
     }
 };
