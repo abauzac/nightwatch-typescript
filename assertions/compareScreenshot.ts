@@ -4,7 +4,7 @@ import * as mkdirp from "mkdirp";
 import * as path from "path";
 
 function compareScreenshot(filename:string, expected:number) {
-    var screenshotPath = 'tests/screenshots/',
+    var screenshotPath = 'screenshots/',
         baselinePath = screenshotPath + 'baseline/' + filename,
         resultPath = screenshotPath + 'results/' + filename,
         diffPath = screenshotPath + 'diffs/' + filename;
