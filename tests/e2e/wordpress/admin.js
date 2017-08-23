@@ -16,6 +16,7 @@ module.exports = {
             this.assert.ok(title.indexOf("Dashboard") !== -1, "Title page should contains 'Dashboard'");
         })
             .pause(3000)
-            .end();
+            .compareScreenshot("testwordpress.png", 5)
+            .end(); // close browser
     }
 };

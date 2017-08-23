@@ -13,11 +13,12 @@ export = {
             .submitForm("#loginform")
             .pause(2000)
             .waitForElementVisible("body", 3000)
-            .getTitle(function (this: NB.NightWatchClient, title:string) {
-                this.assert.equal(typeof title, 'string', "Title page is a string"); 
+            .getTitle(function (this: NB.NightWatchClient, title: string) {
+                this.assert.equal(typeof title, 'string', "Title page is a string");
                 this.assert.ok(title.indexOf("Dashboard") !== -1, "Title page should contains 'Dashboard'")
             })
             .pause(3000)
-            .end();
+            .compareScreenshot("testwordpress.png", 5)
+            .end(); // close browser
     }
 };

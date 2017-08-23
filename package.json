@@ -6,12 +6,13 @@
     "test": "tests"
   },
   "dependencies": {
-    "typescript": "^2.4.2",
     "chromedriver": "^2.31.0",
-    "nightwatch": "^0.9.16"
+    "nightwatch": "^0.9.16",
+    "node-resemble-js": "^0.2.0",
+    "typescript": "^2.4.2"
   },
   "devDependencies": {
-    "@types/node" : "^8.0.19"
+    "@types/node": "^8.0.19"
   },
   "scripts": {
     "watch": "tsc -w",

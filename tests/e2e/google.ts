@@ -13,6 +13,7 @@ export = {
             .pause(1000)
             .assert.containsText('#rso a:first-child',
             'Rembrandt — Wikipédia')
+            
             .end();
     }
 };
