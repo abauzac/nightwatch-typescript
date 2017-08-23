@@ -17,8 +17,19 @@ export = {
                 this.assert.equal(typeof title, 'string', "Title page is a string");
                 this.assert.ok(title.indexOf("Dashboard") !== -1, "Title page should contains 'Dashboard'")
             })
-            .pause(3000)
+            .pause(1000)
+            .end();
+    },
+
+    'Demo admin Wordpress with command': function (client: NB.NightWatchClient) {
+        client
+            .wplogin()
+            .getTitle(function (this: NB.NightWatchClient, title:string) {
+                this.assert.equal(typeof title, 'string', "Title page is a string"); 
+                this.assert.ok(title.indexOf("Dashboard") !== -1, "Title page should contains 'Dashboard'")
+            })
+            .pause(1000)
             .compareScreenshot("testwordpress.png", 5)
-            .end(); // close browser
+            .end();
     }
 };
