@@ -1,8 +1,8 @@
-import { NightwatchAPICustom } from '../../../types/index';
+import { NightwatchBrowser } from 'nightwatch';
 
 export = {
 
-    'Demo admin Wordpress': function (client: NightwatchAPICustom) {
+    'Demo admin Wordpress': function (client: NightwatchBrowser) {
         client
             .url('https://demos1.softaculous.com/WordPress/wp-login.php')
             .waitForElementVisible('body', 3000)
@@ -13,7 +13,7 @@ export = {
             .submitForm("#loginform")
             .pause(2000)
             .waitForElementVisible("body", 3000)
-            .getTitle(function (this: NightwatchAPICustom, title) {
+            .getTitle(function (this: NightwatchBrowser, title) {
                 this.assert.equal(typeof title, 'string', "Title page is a string");
                 this.assert.ok(title.indexOf("Dashboard") !== -1, "Title page should contains 'Dashboard'")
             })
@@ -21,10 +21,10 @@ export = {
             .end();
     },
 
-    'Demo admin Wordpress with command': function (client: NightwatchAPICustom) {
+    'Demo admin Wordpress with command': function (client: NightwatchBrowser) {
         client
             .wplogin()
-            .getTitle(function (this: NightwatchAPICustom, title) {
+            .getTitle(function (this: NightwatchBrowser, title) {
                 this.assert.equal(typeof title, 'string', "Title page is a string"); 
                 this.assert.ok(title.indexOf("Dashboard") !== -1, "Title page should contains 'Dashboard'")
             })

@@ -1,8 +1,8 @@
-import {NightwatchAPICustom} from '../../types/index';
+import { NightwatchBrowser } from 'nightwatch';
 
 export = {
 
-    'Demo test Google': function (client: NightwatchAPICustom) {
+    'Demo test Google': function (client: NightwatchBrowser) {
         client
             .url('https://www.google.com')
             .waitForElementVisible('body', 3000)

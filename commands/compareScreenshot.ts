@@ -1,7 +1,6 @@
-import { NightwatchAPICustom } from "../types/index";
+import { NightwatchBrowser } from "nightwatch";
 
-
-function compareScreenshot (this: NightwatchAPICustom, filename:string, expected:number, callback:Function) {
+function compareScreenshot (this: NightwatchBrowser, filename:string, expected:number, callback:Function) {
     var self = this,
         screenshotPath = 'screenshots/',
         resultPath = screenshotPath + 'results/' + filename;
@@ -16,7 +15,5 @@ function compareScreenshot (this: NightwatchAPICustom, filename:string, expected
 
     return this; // allows the command to be chained.
 };
-
-
 
 exports.command = compareScreenshot;
