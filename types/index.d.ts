@@ -1,15 +1,13 @@
-import {  NightwatchAPI, NightwatchAssertions } from "nightwatch";
+import {   NightwatchAssertions, NightwatchBrowser } from "nightwatch";
 
 // merge interfaces with nightwatch types
 
-export interface NightwatchAssertionsCustom extends NightwatchAssertions {
-    compareScreenshot(this: NightwatchAPI, filename: string, expected: number, callback: Function);
+interface NightwatchCustomAssertions  {
+    compareScreenshot(this: NightwatchBrowser, filename: string, expected: number, callback: Function): NightwatchBrowser;
 }
 
-export interface NightwatchAPICustom extends NightwatchAPI {
-    wplogin(this: NightwatchAPI, callback?: Function):this;
+interface NightwatchCustomCommands  {
+    wplogin(this: NightwatchBrowser, callback?: Function): NightwatchBrowser;
 
-    compareScreenshot(this: NightwatchAPICustom, filename: string, expected?: number, callback?: Function)
-
-    assert: NightwatchAssertionsCustom;
+    compareScreenshot(this: NightwatchBrowser, filename: string, expected?: number, callback?: Function)
 }
