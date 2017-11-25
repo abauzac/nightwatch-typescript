@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "chromedriver": "^2.31.0",
+    "chromedriver": "^2.32.1",
     "nightwatch": "^0.9.16",
     "typescript": "^2.6.1",
     "node-resemble-js": "^0.2.0"
