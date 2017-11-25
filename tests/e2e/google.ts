@@ -1,8 +1,8 @@
-import NB = require("nightwatch");
+import {NightwatchAPICustom} from '../../types/index';
 
 export = {
 
-    'Demo test Google': function (client: NB.NightWatchClient) {
+    'Demo test Google': function (client: NightwatchAPICustom) {
         client
             .url('https://www.google.com')
             .waitForElementVisible('body', 3000)
@@ -12,7 +12,7 @@ export = {
             .setValue('input[type=text]', client.Keys.ENTER) // press Enter to search
             .pause(1000)
             .assert.containsText('#rso a:first-child',
-            'Rembrandt — Wikipédia')
+            'Rembrandt — Wikipédia', 'got french wikipedia website because of GeoLoc IP, you may get something different')
             
             .end();
     }

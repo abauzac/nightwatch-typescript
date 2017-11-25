@@ -6,14 +6,15 @@
         "sourceMap": false,
         "typeRoots": [
             "node_modules/@types",
-            "typings/modules"
+            "types"
         ]
     },
     "include": [
         "tests/**/*.ts",
         "./globalsModule.ts",
         "assertions",
-        "commands"
+        "commands",
+        "types"
     ],
     "exclude": [
         "node_modules",

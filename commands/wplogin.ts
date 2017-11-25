@@ -1,6 +1,6 @@
-import NB = require("nightwatch");
+import { NightwatchAPI } from "nightwatch";
 
-exports.command = function(this : NB.NightWatchClient,  callback: Function){
+exports.command = function(this : NightwatchAPI,  callback: Function){
     return this
             .url('https://demos1.softaculous.com/WordPress/wp-login.php')
             .waitForElementVisible('body', 3000)

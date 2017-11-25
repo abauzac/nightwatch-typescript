@@ -1,5 +1,5 @@
 
-import * as chromedriver from "chromedriver";
+import chromedriver from 'chromedriver';
 export = {
     // this controls whether to abort the test execution when an assertion failed and skip the rest
     // it's being used in waitFor commands and expect assertions

@@ -6,7 +6,8 @@
         "sourceMap": false,
         "typeRoots": [
             "node_modules/@types",
-            "typings/modules"
+            "typings/modules",
+            "types"
         ]
     },
     "include": [

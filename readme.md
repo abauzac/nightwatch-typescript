@@ -4,9 +4,8 @@ Simple boilerplate for nightwatch using typescript (and definitions). This confi
 
 # Install
 
-Assuming you have node, typescript and typings installed globally :
+Assuming you have node, typescript installed globally :
 * `npm update`
-* `typings install`
 
 # How to launch  
 
@@ -16,7 +15,9 @@ Assuming you have node, typescript and typings installed globally :
 
 # Notes
 
-After installing types, rename module for resemblejs : "node-resemble-js"
+Here we are using a fork a resemble-js : https://www.npmjs.com/package/node-resemble-js
+This fork doesn't make use of node-canvas (which has a lot of requirements depending on system host)
+The goal of this repo is to have the minimum viable project with node, nightwatch, typescript to do visual regression tests
 
 # Credit
 
