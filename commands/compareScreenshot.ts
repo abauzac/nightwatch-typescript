@@ -1,12 +1,12 @@
 import { NightwatchBrowser } from "nightwatch";
 
-function compareScreenshot (this: NightwatchBrowser, filename:string, expected:number, callback:Function) {
+function compareScreenshot (this: NightwatchBrowser, filename:string, tolerance:number, callback:Function) {
     var self = this,
         screenshotPath = 'screenshots/',
         resultPath = screenshotPath + 'results/' + filename;
 
-    self.saveScreenshot(resultPath, function () {
-        self.assert.compareScreenshot(filename, expected, function (result) {
+    this.saveScreenshot(resultPath, function () {
+        self.assert.screenshotEquals(filename, tolerance, function (result) {
             if (typeof callback === 'function') {
                 callback.call(self, result);
             }

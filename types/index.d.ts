@@ -1,13 +1,14 @@
-import {   NightwatchAssertions, NightwatchBrowser } from "nightwatch";
+import * as NW from "nightwatch";
 
 // merge interfaces with nightwatch types
+declare module "nightwatch" {
+    export interface NightwatchCustomAssertions {
+        screenshotEquals(this: NW.NightwatchBrowser, filename: string, tolerance?: number, callback?: Function): NW.NightwatchBrowser;
+    }
 
-interface NightwatchCustomAssertions  {
-    compareScreenshot(this: NightwatchBrowser, filename: string, expected: number, callback: Function): NightwatchBrowser;
-}
+    export interface NightwatchCustomCommands {
+        wplogin(this: NW.NightwatchBrowser, callback?: Function): NW.NightwatchBrowser;
 
-interface NightwatchCustomCommands  {
-    wplogin(this: NightwatchBrowser, callback?: Function): NightwatchBrowser;
-
-    compareScreenshot(this: NightwatchBrowser, filename: string, expected?: number, callback?: Function)
+        compareScreenshot(this: NW.NightwatchBrowser, filename: string, tolerance?: number, callback?: Function): NW.NightwatchBrowser
+    }
 }

@@ -3,14 +3,14 @@ import * as fs from "fs";
 import * as mkdirp from "mkdirp";
 import * as path from "path";
 
-function compareScreenshot(filename:string, expected:number) {
+function screenshotEquals(filename:string, tolerance?:number) {
     var screenshotPath = 'screenshots/',
         baselinePath = screenshotPath + 'baseline/' + filename,
         resultPath = screenshotPath + 'results/' + filename,
         diffPath = screenshotPath + 'diffs/' + filename;
 
     this.message = 'Unexpected compareScreenshot error.';
-    this.expected = expected || 0;   // misMatchPercentage tolerance default 0%
+    this.expected = tolerance || 0;   // misMatchPercentage tolerance default 0%
 
     this.command = function (callback) {
 
@@ -41,7 +41,7 @@ function compareScreenshot(filename:string, expected:number) {
     this.value = function (result) {
 
         //save difference if any
-        if (parseFloat(result.misMatchPercentage) != 0) {
+        if (parseFloat(result.misMatchPercentage) !== 0) {
             mkdirp(path.dirname(diffPath), function (err) {
                 if (err) {
                     console.error(err);
@@ -72,4 +72,4 @@ function compareScreenshot(filename:string, expected:number) {
     };
 };
 
-exports.assertion = compareScreenshot;
+exports.assertion = screenshotEquals;
