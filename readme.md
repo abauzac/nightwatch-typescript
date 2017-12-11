@@ -10,8 +10,9 @@ Assuming you have node, typescript installed globally :
 # How to launch  
 
 - Launch chromedriver : `npm run selenium`
-- Launch nightwatch : `npm run test`
 - For typescript auto compile : `npm run watch`
+- Launch nightwatch : `npm run test`
+- Instead of launching, you can directly debug using VSCode using the "Nighwatch" task from the "debugger" menu. Set the breakpoint and here you go
 
 # Notes
 

@@ -6,20 +6,21 @@
     "test": "tests"
   },
   "dependencies": {
-    "chromedriver": "^2.32.1",
-    "nightwatch": "^0.9.16",
-    "typescript": "^2.6.1",
-    "node-resemble-js": "^0.2.0"
+    "chromedriver": "^2.33.2",
+    "nightwatch": "^0.9.19",
+    "node-resemble-js": "^0.2.0",
+    "typescript": "^2.6.2"
   },
   "devDependencies": {
     "@types/nightwatch": "^0.9.3",
-    "@types/node": "^8.0.19",
+    "@types/node": "^8.0.57",
     "@types/resemblejs": "^1.3.28"
   },
   "scripts": {
     "watch": "tsc -w",
     "selenium": "node_modules/.bin/chromedriver --port=9515",
-    "test": "node_modules/.bin/nightwatch"
+    "test": "node_modules/.bin/nightwatch",
+    "debug": "node --nolazy --inspect-brk=9229 node_modules/nightwatch/bin/runner.js"
   },
   "author": "",
   "license": "ISC"

@@ -2,5 +2,6 @@
     "eslint.enable": false,
     "files.exclude": {
         "node_modules": true
-    }
+    },
+    "jshint.enable": false
 }
